@@ -1,0 +1,36 @@
+<html>
+<head>
+  <title>Webpage with input field and submit button</title>
+</head>
+<body>
+  <p>Input field and submit button</p>
+  <input type="text" id="textInput" placeholder="Text something here...">
+  <button id="submitButton" onclick="submitClick()">Submit</button>
+
+ <p><span id="show"></span></p> 
+
+  <script>
+ const txtElement = document.getElementById('textInput');
+ const showSpan = document.getElementById('show');
+ const submitElement = document.getElementById('submitButton');
+
+function submitClick(){
+ showSpan.innerText=txtElement.value;
+}
+
+
+txtElement.addEventListener('mouseover', function() {
+showSpan.style.fontSize="40px";
+showSpan.style.color = "blue";
+    });    
+    
+ 
+txtElement.addEventListener('mouseout', function() {
+     showSpan.style.fontSize="20px";
+showSpan.style.color = "#333";
+    });        
+    
+  </script>
+
+</body>
+</html>
